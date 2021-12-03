@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+<!-- Page Header -->
+{{ block "header" .}}
+
+
+{{ if (eq .Page.RelPermalink "/categories/lexique/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_lexique }}')">
+{{ else if (eq .Page.RelPermalink "/categories/piat/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_piat }}')">
+{{ else if (eq .Page.RelPermalink "/categories/publications/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_publications }}')">
+{{ else if (eq .Page.RelPermalink "/categories/newspapers/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_newspapers }}'); background-color: rgba(0,0,255,0.3);">
+{{ else if (eq .Page.RelPermalink "/categories/%C3%A9v%C3%A8nements/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_event }}'); background-color: rgba(0,0,255,0.3);">
+{{ else if (eq .Page.RelPermalink "/categories/concerts/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_concerts }}'); background-color: rgba(0,0,255,0.3);">
+{{ else if (eq .Page.RelPermalink "/top/donations/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_donations }}'); background-color: rgba(0,0,255,0.3);">
+{{ else if (eq .Page.RelPermalink "/top/quisommesnous/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image_quisommesnous }}'); background-color: rgba(59, 183, 96, 0.52);">
+{{ else if (eq .Page.RelPermalink "/top/contact/" ) }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image }}')">
+{{ else }}
+  <header class="intro-header" style="background-image: url('{{ .Site.Params.header_image }}')">
+{{ end }}
+
+
+
+
+    <div class="container">
+        <div class="row">
+          <!-- <h2>{{ .Page.RelPermalink }}</h2> -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                  {{ if (eq .Page.RelPermalink "/categories/lexique/" ) }}
+                    <h1>{{ .Site.Params.categorie_lexique_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/categories/piat/" ) }}
+                    <h1>{{ .Site.Params.categorie_piat_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/categories/publications/" ) }}
+                    <h1>{{ .Site.Params.categorie_publications_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/categories/newspapers/" ) }}
+                    <h1>{{ .Site.Params.categorie_newspapers_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/categories/%C3%A9v%C3%A8nements/" ) }}
+                    <h1>{{ .Site.Params.categorie_event_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/categories/concerts/" ) }}
+                    <h1>{{ .Site.Params.categorie_concerts_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/top/donations/" ) }}
+                    <h1>{{ .Site.Params.categorie_donations_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/top/quisommesnous/" ) }}
+                    <h1>{{ .Site.Params.categorie_quisommesnous_titre }} </h1>
+                  {{ else if (eq .Page.RelPermalink "/top/contact/" ) }}
+                    <h1>{{ .Site.Params.categorie_contact_titre }} </h1>
+                  {{ else }}
+                    <h1>{{ .Site.Title }} </h1>
+                  {{ end }}
+
+                    <!--<hr class="small">-->
+                    {{ if (eq .Page.RelPermalink "/categories/lexique/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_lexique_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/categories/piat/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_piat_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/categories/publications/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_publications_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/categories/newspapers/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_newspapers_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/categories/%C3%A9v%C3%A8nements/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_event_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/categories/concerts/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_concerts_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/top/donations/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_donations_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/top/quisommesnous/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_quisommesnous_sous_titre }}</span>
+                    {{ else if (eq .Page.RelPermalink "/top/contact/" ) }}
+                        <span class="subheading">{{ .Site.Params.categorie_contact_sous_titre }}</span>
+                    {{ else }}
+		                    <span class="subheading">{{ .Site.Params.slogan }}</span>
+                    {{ end }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{ end }}
+
+{{ block "main" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}
+</body>
+</html>

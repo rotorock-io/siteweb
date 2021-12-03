@@ -1,0 +1,63 @@
+formemail: メール
+formfirstname: 名
+formlastname: 氏
+# month[3] => Mars
+semainier:
+  - jourdelasemaine:
+      text: Lundi
+      indice: 1
+  - jourdelasemaine:
+      text: Mardi
+      indice: 2
+  - jourdelasemaine:
+      text: Mercredi
+      indice: 3
+  - jourdelasemaine:
+      text: Jeudi
+      indice: 4
+  - jourdelasemaine:
+      text: Vendredi
+      indice: 5
+  - jourdelasemaine:
+      text: Samedi
+      indice: 6
+  - jourdelasemaine:
+      text: Dimanche
+      indice: 7
+calendrier:
+  - mois:
+      text: Janvier
+      indice: 1
+  - mois:
+      text: Février
+      indice: 2
+  - mois:
+      text: Mars
+      indice: 3
+  - mois:
+      text: Avril
+      indice: 4
+  - mois:
+      text: Mai
+      indice: 5
+  - mois:
+      text: Juin
+      indice: 6
+  - mois:
+      text: Juillet
+      indice: 7
+  - mois:
+      text: Août
+      indice: 8
+  - mois:
+      text: Septembre
+      indice: 9
+  - mois:
+      text: Octobre
+      indice: 10
+  - mois:
+      text: Novembre
+      indice: 11
+  - mois:
+      text: Décembre
+      indice: 12

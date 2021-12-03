@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PIAT on RotoRock</title>
+    <link>https://rotorock.io/categories/piat/</link>
+    <description>Recent content in PIAT on RotoRock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Wed, 23 May 2018 10:00:00 +0000</lastBuildDate><atom:link href="https://rotorock.io/categories/piat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Audit des besoins alimentaires</title>
+      <link>https://rotorock.io/2018/05/22/audit_besoins_alimentaires/</link>
+      <pubDate>Wed, 23 May 2018 10:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock.io/2018/05/22/audit_besoins_alimentaires/</guid>
+      <description>Audit des besoins alimentaires </description>
+    </item>
+    
+  </channel>
+</rss>

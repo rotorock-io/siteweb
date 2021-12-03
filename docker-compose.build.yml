@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  territoiresfuturs_prod:
+    # we need extended, and nodejs for sass!
+    image: quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}
+    container_name: territoiresfuturs_prod
+    build:
+       context: .
+       dockerfile: prod.Dockerfile
+       args:
+         - ALPINE_OCI_IMAGE_TAG=${ALPINE_OCI_IMAGE_TAG}
+         - GOLANG_VERSION=${GOLANG_VERSION}
+         - HUGO_VERSION=${HUGO_VERSION}
+         - GIT_COMMIT_ID=${GIT_COMMIT_ID}
+         - CICD_BUILD_ID=${CICD_BUILD_ID}
+         - CICD_BUILD_TIMESTAMP=${CICD_BUILD_TIMESTAMP}
+         - QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG}
+    env_file:
+      - ./.prod.env
+  territoiresfuturs_staging:
+    # we need extended, and nodejs for sass!
+    image: quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}
+    container_name: territoiresfuturs_prod
+    build:
+       context: .
+       dockerfile: prod.Dockerfile
+       args:
+         - ALPINE_OCI_IMAGE_TAG=${ALPINE_OCI_IMAGE_TAG}
+         - GOLANG_VERSION=${GOLANG_VERSION}
+         - HUGO_VERSION=${HUGO_VERSION}
+         - GIT_COMMIT_ID=${GIT_COMMIT_ID}
+         - CICD_BUILD_ID=${CICD_BUILD_ID}
+         - CICD_BUILD_TIMESTAMP=${CICD_BUILD_TIMESTAMP}
+         - QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG}
+    env_file:
+      - ./.staging.env

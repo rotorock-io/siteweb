@@ -1,0 +1,168 @@
+baseurl = "https://rotorock.io"
+title = "RotoRock !"
+# title = " "
+theme = "clean-white"
+# languageCode = "en-us"
+languageCode = "fr-fr"
+locale = "fr_FR"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+googleAnalytics = ""
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+hasCJKLanguage = true
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+[params]
+  # SNIPCART
+  snipcart_api_key = "NjBhMDE3MDYtYjllNS00MThlLTk3MzAtYjQ3ZTk2OTFiNjYyNjM3NzIwODkwOTkwMDM5ODM0"
+  # header_image = "img/territoires/Logo-Territoires.jpg"
+  header_image = "/img/rotorock/ethan-judd-yVKGWunM960-unsplash(1).jpg"
+  # header_image = "img/territoires/melange-logo-photo-accueil-resized.png"
+  # header_image = "img/home-bg-jeep.jpg"
+
+  header_image_event = "/img/territoires/unspalsh/luke-porter-NEqEC7qa9FM-unsplash.jpg"
+  categorie_event_titre = "Évènements"
+  categorie_event_sous_titre = "Manifestations, rencontres-débats, stages..."
+
+  header_image_concerts = "/img/rotorock/alexandre-st-louis-IlfpKwRMln0-unsplash(2).jpg"
+  categorie_concerts_titre = "Concerts"
+  categorie_concerts_sous_titre = "Concerts à venir"
+
+
+  header_image_donations = "/img/territoires/unspalsh/andre-taissin-Dc2SRspMak4-unsplash.jpg"
+  categorie_donations_titre = "Crowdfunding"
+  categorie_donations_sous_titre = "Devenir Mécène de notre média-réseau"
+
+  header_image_quisommesnous = "/img/rotorock/ethan-judd-yVKGWunM960-unsplash(1).jpg"
+  categorie_quisommesnous_titre = "Qui sommes-nous?"
+  categorie_quisommesnous_sous_titre = ""
+
+  header_image_contact = "/img/territoires/Logo-Territoires.jpg"
+  categorie_contact_titre = "Contact"
+  categorie_contact_sous_titre = ""
+
+  SEOTitle = "RotoRock"
+  description = "un projet d'intervention territorial inscrit dans une éthique de préservation de la nature, du vivant et des espèces, qui a pour vocation à faire se rassembler, au sein d'un réseau, des individus de tous horizons qui seront capable de s'organiser pour prendre des décisions et intervenir de manière cohérente sur tout le territoire"
+  keyword = "urbanisation, plan d'aménagement du territoire"
+  # slogan = "Renversements de perspectives"
+  slogan = "RotoRock, Du Rock, pur"
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "你来到了没有知识的荒原 :("
+  omit_categories = false
+
+  # leancloud storage for page view counter
+  page_view_conter = false
+  leancloud_app_id = ""
+  leancloud_app_key = ""
+
+  # algolia site search
+  algolia_search = true
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
+
+  # Sidebar settings
+  sidebar_about_description = "L'équipe Territoires et futur est formée de tout citoyen"
+
+  sidebar_avatar = "img/findmeboy.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+  featured_tags = true
+  featured_condition_size = 1
+
+  # Baidu Analytics
+  ba_track_id = ""
+
+  # We need a proxy to access Disqus api in China
+  # Follow https://github.com/fooleap/disqus-php-api to set up your own disqus proxy
+  # ---> Jean-Baptistte Lasselle : PHP is forbidden in our IS, so if you wanna use disqus, let's talk about it we'll do that neatly.
+  disqus_proxy = ""
+  disqus_site = ""
+
+  #Enable wechat pay & alipay to allow readers send reward money if they like the articles
+  reward = true
+  # reward_guide = "如果这篇文章对你有用,请随意打赏"
+
+  friends = true
+  bookmarks = false
+  about_me = true
+
+  # Include any custom CSS and/or JS files, url or relative to /static folder
+  #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
+  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
+
+  [params.social]
+  # rss            = true
+  # email          = "voilacherchemoi@gmail.com"
+  #facebook      = "full profile url in facebook"
+  #googleplus    = "full profile url in googleplus"
+  #twitter       = "full profile url in twitter"
+  discord        = "https://discord.gg/gfXyp4QnRA"
+  twitch         = "https://www.twitch.tv/rotorrick"
+  # linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
+  # stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+  #instagram     = "full profile url in instagram"
+  github         = "https://github.com/rotorock-io/siteweb"
+  # wechat         = "your wechat qr code image"
+#  medium         = "full profile url in medium"
+  #pinterest     = "full profile url in pinterest"
+  #reddit        = "full profile url in reddit"
+  #gitlab        = "full profile url in gitlab"
+  #mastodon      = "full profile url in mastodon"
+  #keybase       = "full profile url in keybase"
+  #xing          = "https://www.xing.com/profile/yourxingid"
+  #git           = "full profile url for git user"
+
+  [[params.friend_link]]
+  title = "Linda的博客"
+  href =  "https://zhaozhihan.com"
+
+  [[params.bookmark_link]]
+  title =  "Martin Fowler"
+  href =  "https://martinfowler.com"
+  [[params.bookmark_link]]
+  title = "ServiceMesher"
+  href =  "http://www.servicemesher.com"
+  [[params.bookmark_link]]
+  title =  "Pxhere"
+  href = "https://pxhere.com"
+  [[params.bookmark_link]]
+  title = "unsplash"
+  href = "https://unsplash.com"
+
+  # [[params.addtional_menus]]
+  # title =  "BOOKS"
+  # href =  "/top/books/"
+  [[params.addtional_menus]]
+  title =  "Crowdfunding"
+  href =  "/top/donations/"
+  [[params.addtional_menus]]
+  title =  "Qui sommes-nous ?"
+  href =  "/top/quisommesnous/"
+  [[params.addtional_menus]]
+  title =  "Contact"
+  href =  "/top/contact/"
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    startLevel = 2
+  [markup.highlight]
+    style = "dracula"
+
+
+[reveal_hugo.custom_theme_options]
+targetPath = "assets/custom-theme.css"
+enableSourceMap = true

@@ -1,0 +1,123 @@
+{{ if .IsNamedParams }}
+	<!--Container-->
+	<div id="mapid{{.Get "mapLon" }}" style="width:{{.Get "mapWidth" }};height:{{.Get "mapHeight" }};"></div>
+
+	<!--Populate with marker-->
+	<script>
+		// Define zoom level with default if not defined
+		let zoom = {{ if .Get "zoom" }}{{ int (.Get "zoom") }}{{ else }}13{{ end }};
+		// Create Map
+			var map_jaune = L.map('mapid{{.Get "mapLon" }}').setView([{{.Get "mapLat" }}, {{.Get "mapLon" }}], zoom);
+		// Add tiles
+			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map_jaune);
+		// Simple Marker
+		/* */
+			{{ if and (.Get "markerLat") (.Get "markerLon") }}
+				var markerRDV = L.marker([{{.Get "markerLat" }}, {{.Get "markerLon" }}]).addTo(map_jaune);
+
+			{{ end }}
+			{{ if .Get "markerContent" }}
+				// markerRDV.bindPopup("{{.Get "markerContent" }}");
+				var markerContent = "{{.Get "markerContent" }}"
+			{{ end }}
+			{{ if and (.Get "markerLat") (.Get "markerLon") }}
+
+				markerRDV.on('mouseover', function(e) {
+						var popLocation= e.latlng;
+						var popup = L.popup()
+						.setLatLng(popLocation)
+						// .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+						.setContent(markerContent + "<br/><p><input class='jaune hidden' type='text' value='" + e.latlng + "' id='lonLatHiddenInput'> <br/> <button  id='btnLonLatHiddenInput' class='btncarte' onclick='copyToClipboardBtn()'>Copy LAT/LON</button></p>" + " <p><br />Latitude et Longitude :[" + e.latlng + "]</p>")
+						.openOn(map_jaune);
+						//var copyText = document.getElementById("lonLatHiddenInput");
+						// document.getElementById('lonLatHiddenInput').value = e.latlng.toString();
+				});
+			{{ end }}
+
+		// Fixed marker on [LON, LAT] = ["45.777091", "3.081961"]
+		/*
+			var poi_LAT = '45.777091';
+			var poi_LON = '3.081961';
+			var markerVercingetorix = L.marker([poi_LAT, poi_LON]).addTo(map_jaune);
+		*/
+
+		// On Click event display lon lat
+
+			map_jaune.on('click', function(e) {
+	        var popLocation= e.latlng;
+	        var popup = L.popup()
+	        .setLatLng(popLocation)
+	        // .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+					.setContent(`<p>Cent Pour Cent Jaune!<br /> On lâche rien</p> Voici la latitude et la longitude du point surlequel vous venez de cliquer : [${popLocation}]`)
+	        .openOn(map_jaune);
+	    });
+
+			// LAT / LON
+			// POINT 1 : 45.776836, 3.082352
+			var coinPiqueNiquePoi1_LAT = '45.776836';
+			var coinPiqueNiquePoi1_LON = '3.082352';
+			// POINT 2 : 45.776425, 3.082374
+			var coinPiqueNiquePoi2_LAT = '45.776425';
+			var coinPiqueNiquePoi2_LON = '3.082374';
+			// POINT 3 : 45.776761, 3.082127
+			var coinPiqueNiquePoi3_LAT = '45.776761';
+			var coinPiqueNiquePoi3_LON = '3.082127';
+
+			var coinPiqueNique = L.polygon([
+			    [coinPiqueNiquePoi1_LAT, coinPiqueNiquePoi1_LON],
+			    [coinPiqueNiquePoi2_LAT, coinPiqueNiquePoi2_LON],
+			    [coinPiqueNiquePoi3_LAT, coinPiqueNiquePoi3_LON]
+			]).addTo(map_jaune);
+			coinPiqueNique.on('mouseover', function(e) {
+					var popLocation= e.latlng;
+					var popup = L.popup()
+					.setLatLng(popLocation)
+	        // .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+					.setContent(`<p>Ici c'est le coin pique nique<br /> Cent Pour Cent Jaune! On lâche rien</p> <p><br />Cliquez pour obtenir la latitude et la longitude du point</p>`)
+	        .openOn(map_jaune);
+	    });
+
+			// 45.776189, 3.082207
+			var coinFormationsITPoi_LAT = '45.776189';
+			var coinFormationsITPoi_LON = '3.082207';
+			var coinFormationsIT = L.circle([coinFormationsITPoi_LAT, coinFormationsITPoi_LON], {
+			    color: 'pink',
+			    fillColor: '#f83',
+			    fillOpacity: 0.5,
+			    radius: 10 // rayon du cercle en mètres
+			}).addTo(map_jaune);
+			coinFormationsIT.on('mouseover', function(e) {
+	        var popLocation= e.latlng;
+	        var popup = L.popup()
+	        .setLatLng(popLocation)
+	        // .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+					.setContent(`<p>Ici c'est le Coin Formations<br /> Cent Pour Cent Jaune! On lâche rien</p> <p><br />Cliquez pour obtenir la latitude et la longitude du point</p>`)
+	        .openOn(map_jaune);
+	    });
+			// <!-- The text field -->
+      // <input type="text" value="Hello World" id="lonLatInput">
+			// <!-- The button used to copy the text -->
+      // <button onclick="copyToClipboardBtn()">Copy text</button>
+			function copyToClipboardBtn() {
+			  /* Get the text field */
+			  var copyText = document.getElementById("lonLatHiddenInput");
+
+			  /* Select the text field */
+			  copyText.select();
+			  // copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+			  /* Copy the text inside the text field */
+			  document.execCommand("copy");
+
+			  /* Alert the copied text */
+			  alert("Copied LAT/LON: " + copyText.value);
+			}
+	</script>
+{{ else }}
+<hr>
+<h1>Leaflet Simple Marker</h1>
+<h2>Please provide named Paramters</h2>
+<hr>
+{{ end }}

@@ -1,0 +1,57 @@
+nav#TableOfContents ul li a {
+  color: #404040;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav#TableOfContents ul li {
+  color: green;
+  list-style: none;
+}
+
+h2#au-programme, h2#date, h2#heure, h2#lieu {
+  color: #404040;
+  text-transform: uppercase;
+  /* font-size: 12px; */
+  line-height: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+li.starus.on.github {
+  position: relative;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  padding: 20px 20px 20px 1rem;
+}
+
+li.starus.on.github iframe {
+  position: relative;
+  display: block;
+  float: left;
+}
+div.snipterri {
+  padding-top: 2rem;
+}
+
+/* preview de posts avec videos youtube */
+
+/*
+iframe.la.main.jaune {
+  width: 25%;
+  height: 33%;
+}
+
+.cadre.la.main.jaune {
+  width: 25%;
+}
+
+.post.content.preview.la.main.jaune {
+  width: 25%;
+  height: 33%;
+}
+*/

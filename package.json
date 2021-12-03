@@ -1,0 +1,18 @@
+{
+  "name": "territoiresfuturs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "spawn": "echo \"spawn up new hugo project from Hugo theme\" && ./.npm.scripts/spawn.sh",
+    "clean": "echo \"cleaning hugo project\" && ./.npm.scripts/clean.sh",
+    "parse-hugo-them-toml": "node .npm.scripts/toml-parser.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "toml": "^3.0.0"
+  }
+}
