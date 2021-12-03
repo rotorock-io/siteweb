@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tops on RotoRock !</title>
-    <link>https://rotorock-io.github.io/siteweb/top/</link>
+    <link>https://rotorock.io/top/</link>
     <description>Recent content in Tops on RotoRock !</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language><atom:link href="https://rotorock-io.github.io/siteweb/top/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr-fr</language><atom:link href="https://rotorock.io/top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://rotorock-io.github.io/siteweb/top/contact/</link>
+      <link>https://rotorock.io/top/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rotorock-io.github.io/siteweb/top/contact/</guid>
+      <guid>https://rotorock.io/top/contact/</guid>
       <description>Contactez-nous Écrivez-nous à [adresse email bientôt] pour :
  Recevoir notre newsletter. Être informé des travaux en cours. Participer à des ateliers. Rencontrer les autres membres du réseau.  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rotorock-io.github.io/siteweb/top/donations/</link>
+      <link>https://rotorock.io/top/donations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rotorock-io.github.io/siteweb/top/donations/</guid>
+      <guid>https://rotorock.io/top/donations/</guid>
       <description>Crowdfunding (Les boutons ci-dessous ne sont pas utilisables, il s&amp;rsquo;agit d&amp;rsquo;un test technique)</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://rotorock-io.github.io/siteweb/top/quisommesnous/</link>
+      <link>https://rotorock.io/top/quisommesnous/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rotorock-io.github.io/siteweb/top/quisommesnous/</guid>
+      <guid>https://rotorock.io/top/quisommesnous/</guid>
       <description>Nous sommes un groupe de Rock (balbalbla&amp;hellip;)
 (balbalbla&amp;hellip;), (balbalbla&amp;hellip;), (balbalbla&amp;hellip;) :
  (balbalbla&amp;hellip;) (balbalbla&amp;hellip;) (balbalbla&amp;hellip;) (balbalbla&amp;hellip;) (balbalbla&amp;hellip;) (balbalbla&amp;hellip;)  </description>
@@ -38,10 +38,10 @@
     
     <item>
       <title>Archives</title>
-      <link>https://rotorock-io.github.io/siteweb/top/archive/</link>
+      <link>https://rotorock.io/top/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rotorock-io.github.io/siteweb/top/archive/</guid>
+      <guid>https://rotorock.io/top/archive/</guid>
       <description></description>
     </item>
     
