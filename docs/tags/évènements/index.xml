@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>évènements on RotoRock</title>
-    <link>https://rotorock.io/tags/%C3%A9v%C3%A8nements/</link>
-    <description>Recent content in évènements on RotoRock</description>
+    <title>évènements on RotoRock !</title>
+    <link>https://rotorock-io.github.io/siteweb/tags/%C3%A9v%C3%A8nements/</link>
+    <description>Recent content in évènements on RotoRock !</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Tue, 30 Nov 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://rotorock.io/tags/%C3%A9v%C3%A8nements/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://rotorock-io.github.io/siteweb/tags/%C3%A9v%C3%A8nements/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Vidéo du documentaire &#39;AGIR !&#39;</title>
-      <link>https://rotorock.io/2021/11/30/vid%C3%A9os/de-lancement/p1/</link>
+      <title>&#39;RotoRock&#39; Revient !</title>
+      <link>https://rotorock-io.github.io/siteweb/2021/11/30/vid%C3%A9os/retour-des-concerts/</link>
       <pubDate>Tue, 30 Nov 2021 08:00:00 +0000</pubDate>
       
-      <guid>https://rotorock.io/2021/11/30/vid%C3%A9os/de-lancement/p1/</guid>
-      <description>Vidéo de lancement : Partie 1   Vidéo de lancement : Partie 2   </description>
+      <guid>https://rotorock-io.github.io/siteweb/2021/11/30/vid%C3%A9os/retour-des-concerts/</guid>
+      <description>Retour du RotoRock ! (Extrait 1)   Retour du RotoRock ! (Extrait 2)   </description>
     </item>
     
     <item>
-      <title>Soirée de lancement</title>
-      <link>https://rotorock.io/2021/11/10/%C3%A9v%C3%A8nements/soir%C3%A9e-de-lancement/</link>
+      <title>Signatures d&#39;albums à la FNAC Paris 14</title>
+      <link>https://rotorock-io.github.io/siteweb/2021/11/10/%C3%A9v%C3%A8nements/soir%C3%A9e-de-lancement/</link>
       <pubDate>Wed, 10 Nov 2021 08:00:00 +0000</pubDate>
       
-      <guid>https://rotorock.io/2021/11/10/%C3%A9v%C3%A8nements/soir%C3%A9e-de-lancement/</guid>
-      <description>Au programme Soirée de lancement du média-réseau RotoRock et projection du documentaire &amp;ldquo;AGIR !&amp;quot;.
-Date La date est fixée au Mardi 1er Décembre 2021, notez que celle-ci sera peut-être modifiée aavant le 20 Novembre 2021.
-Heure Le rendez-vous sera à 21h00
-Lieu Le lieu de où l&amp;rsquo;inauguration au aura lieu sera communiqué dans les prochains jours</description>
+      <guid>https://rotorock-io.github.io/siteweb/2021/11/10/%C3%A9v%C3%A8nements/soir%C3%A9e-de-lancement/</guid>
+      <description>Au programme Nous serons àla FNAC rue de Rennes, pour vosu dédicacer vos albums, et faire un petit échange Fanzone :) !
+Date La date est fixée au Mardi 1er Décembre 2021, notez que celle-ci sera peut-être modifiée avant le 20 Novembre 2021.
+Heure Le rendez-vous sera à 16h00
+Lieu FNAC Rue de Rennes, 75014 Paris</description>
     </item>
     
   </channel>

@@ -1,63 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on RotoRock</title>
-    <link>https://rotorock.io/categories/</link>
-    <description>Recent content in Categories on RotoRock</description>
+    <title>Categories on RotoRock !</title>
+    <link>https://rotorock-io.github.io/siteweb/categories/</link>
+    <description>Recent content in Categories on RotoRock !</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language>
-    <lastBuildDate>Tue, 30 Nov 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://rotorock.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://rotorock-io.github.io/siteweb/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>évènements</title>
-      <link>https://rotorock.io/categories/%C3%A9v%C3%A8nements/</link>
+      <link>https://rotorock-io.github.io/siteweb/categories/%C3%A9v%C3%A8nements/</link>
       <pubDate>Tue, 30 Nov 2021 08:00:00 +0000</pubDate>
       
-      <guid>https://rotorock.io/categories/%C3%A9v%C3%A8nements/</guid>
+      <guid>https://rotorock-io.github.io/siteweb/categories/%C3%A9v%C3%A8nements/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Lexique</title>
-      <link>https://rotorock.io/categories/lexique/</link>
-      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rotorock.io/categories/lexique/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://rotorock.io/categories/publications/</link>
-      <pubDate>Wed, 23 May 2018 15:00:00 +0000</pubDate>
-      
-      <guid>https://rotorock.io/categories/publications/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PIAT</title>
-      <link>https://rotorock.io/categories/piat/</link>
-      <pubDate>Wed, 23 May 2018 10:00:00 +0000</pubDate>
-      
-      <guid>https://rotorock.io/categories/piat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sport</title>
-      <link>https://rotorock.io/categories/sport/</link>
+      <title>Concerts</title>
+      <link>https://rotorock-io.github.io/siteweb/categories/concerts/</link>
       <pubDate>Wed, 08 Nov 2017 15:00:00 +0000</pubDate>
       
-      <guid>https://rotorock.io/categories/sport/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>newspapers</title>
-      <link>https://rotorock.io/categories/newspapers/</link>
-      <pubDate>Tue, 07 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://rotorock.io/categories/newspapers/</guid>
+      <guid>https://rotorock-io.github.io/siteweb/categories/concerts/</guid>
       <description></description>
     </item>
     
