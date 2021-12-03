@@ -1,10 +1,10 @@
 version: "3.7"
 
 services:
-  territoiresfuturs_prod:
+  rotorock-io_prod:
     # we need extended, and nodejs for sass!
-    image: quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}
-    container_name: territoiresfuturs_prod
+    image: quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}
+    container_name: rotorock-io_prod
     build:
        context: .
        dockerfile: prod.Dockerfile
@@ -18,10 +18,10 @@ services:
          - QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG}
     env_file:
       - ./.prod.env
-  territoiresfuturs_staging:
+  rotorock-io_staging:
     # we need extended, and nodejs for sass!
-    image: quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}
-    container_name: territoiresfuturs_prod
+    image: quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}
+    container_name: rotorock-io_prod
     build:
        context: .
        dockerfile: prod.Dockerfile
