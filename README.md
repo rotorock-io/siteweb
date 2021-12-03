@@ -21,8 +21,8 @@ export PATH=$PATH:/usr/local/go/bin && go version
 git clone git@github.com:rotorock-io/siteweb.git ~/rotorock-io-work
 cd ~/rotorock-io-work
 git checkout develop && atom .
-export HUGO_BASE_URL=https://rotorock.io
 export HUGO_BASE_URL=https://rotorock-io.github.io/siteweb/
+export HUGO_BASE_URL=https://rotorock.io
 hugo -b ${HUGO_BASE_URL}
 if [ -d ./docs/ ]; then
   rm -fr docs/
@@ -35,9 +35,9 @@ echo "rotorock.io" > CNAME
 
 git add -A && git commit -m "deploy" && git push -u origin HEAD
 
-git flow release start 0.0.2
+git flow release start 0.0.3
 
-git flow release finish -s 0.0.2 && git push -u origin --all && git push -u origin --tags
+git flow release finish -s 0.0.3 && git push -u origin --all && git push -u origin --tags
 
 ```
 
