@@ -23,9 +23,9 @@ home = ["HTML", "RSS", "Algolia"]
   # header_image = "img/territoires/melange-logo-photo-accueil-resized.png"
   # header_image = "img/home-bg-jeep.jpg"
 
-  header_image_event = "/img/territoires/unspalsh/luke-porter-NEqEC7qa9FM-unsplash.jpg"
+  header_image_event = "/img/rotorock/kovid-rathee-bnzstUqRKnM-unsplash(2).jpg"
   categorie_event_titre = "Évènements"
-  categorie_event_sous_titre = "Manifestations, rencontres-débats, stages..."
+  categorie_event_sous_titre = "Concerts, Fanzones, Rencontres Dédicaces..."
 
   header_image_concerts = "/img/rotorock/alexandre-st-louis-IlfpKwRMln0-unsplash(2).jpg"
   categorie_concerts_titre = "Concerts"
@@ -34,19 +34,19 @@ home = ["HTML", "RSS", "Algolia"]
 
   header_image_donations = "/img/territoires/unspalsh/andre-taissin-Dc2SRspMak4-unsplash.jpg"
   categorie_donations_titre = "Crowdfunding"
-  categorie_donations_sous_titre = "Devenir Mécène de notre média-réseau"
+  categorie_donations_sous_titre = "Pour nosu soutenir, juste parce uqe vous aimez nos projets!"
 
   header_image_quisommesnous = "/img/rotorock/ethan-judd-yVKGWunM960-unsplash(1).jpg"
   categorie_quisommesnous_titre = "Qui sommes-nous?"
   categorie_quisommesnous_sous_titre = ""
 
-  header_image_contact = "/img/territoires/Logo-Territoires.jpg"
+  header_image_contact = "/img/rotorock/tim-toomey-eiY4KJ62P5Q-unsplash.jpg"
   categorie_contact_titre = "Contact"
   categorie_contact_sous_titre = ""
 
   SEOTitle = "RotoRock"
-  description = "un projet d'intervention territorial inscrit dans une éthique de préservation de la nature, du vivant et des espèces, qui a pour vocation à faire se rassembler, au sein d'un réseau, des individus de tous horizons qui seront capable de s'organiser pour prendre des décisions et intervenir de manière cohérente sur tout le territoire"
-  keyword = "urbanisation, plan d'aménagement du territoire"
+  description = "Le site internet du Groupe Rotorock!"
+  keyword = "concert, rock, sueur"
   # slogan = "Renversements de perspectives"
   slogan = "RotoRock, Du Rock, pur"
 
