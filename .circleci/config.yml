@@ -1,6 +1,6 @@
 version: 2.1
-# "rendez-vous à la française", at https://app.circleci.com/projects/project-setup/github/territoiresfuturs/siteweb/
-# # TODO : improve all this, by using a territoiresfuturs orb, and use docker executors only
+# "rendez-vous à la française", at https://app.circleci.com/projects/project-setup/github/rotorock-io/siteweb/
+# # TODO : improve all this, by using a rotorock-io orb, and use docker executors only
 parameters:
   admin_task:
     type: enum
@@ -8,7 +8,7 @@ parameters:
     default: blank
   secrethub_org:
     type: string
-    default: "territoiresfuturs"
+    default: "rotorock-io"
     description: "SecretHub Org to use to fetch secrets ?"
   secrethub_repo:
     type: string
@@ -80,15 +80,15 @@ jobs:
             sed -i "s#CICD_BUILD_ID=.*#CICD_BUILD_ID=${CICD_BUILD_ID}#g" docker-compose.prod.build.yml
             sed -i "s#CICD_BUILD_TIMESTAMP=.*#CICD_BUILD_TIMESTAMP=${CICD_BUILD_TIMESTAMP}#g" docker-compose.prod.build.yml
             sed -i "s#QUAY_OCI_IMAGE_TAG=.*#QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG}#g" docker-compose.prod.build.yml
-            sed -i "s#image: quay.io/territoiresfuturs/siteweb:.*#image: quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}#g" docker-compose.prod.build.yml
+            sed -i "s#image: quay.io/rotorock-io/siteweb:.*#image: quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}#g" docker-compose.prod.build.yml
             # ---
             echo "# --------------------------------------------------------------------------- #"
             echo "# -------   DOCKER COMPOSE CONFIG : "
             echo "# --------------------------------------------------------------------------- #"
             docker-compose -f ./docker-compose.prod.build.yml config
             echo "# --------------------------------------------------------------------------- #"
-            docker-compose -f ./docker-compose.prod.build.yml build territoiresfuturs_prod
-            # and now [quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}] should exists among [docker images]
+            docker-compose -f ./docker-compose.prod.build.yml build rotorock-io_prod
+            # and now [quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}] should exists among [docker images]
             docker images
       - run:
           name: "Docker login to Container Registry"
@@ -96,8 +96,8 @@ jobs:
             echo "Checking Circle CI Job env. variables"
             echo "SECRETHUB_ORG=[${SECRETHUB_ORG}]"
             echo "SECRETHUB_REPO=[${SECRETHUB_REPO}]"
-            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/username)
-            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/usersecret)
+            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/username)
+            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/usersecret)
             echo "QUAY_BOT_USERNAME=[${QUAY_BOT_USERNAME}]"
             # echo "QUAY_BOT_SECRET=[${QUAY_BOT_SECRET}]"
             docker login -u="${QUAY_BOT_USERNAME}" -p="${QUAY_BOT_SECRET}" quay.io
@@ -107,8 +107,8 @@ jobs:
             echo "Checking Circle CI Job env. variables"
             echo "SECRETHUB_ORG=[${SECRETHUB_ORG}]"
             echo "SECRETHUB_REPO=[${SECRETHUB_REPO}]"
-            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/username)
-            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/usersecret)
+            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/username)
+            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/usersecret)
             echo "QUAY_BOT_USERNAME=[${QUAY_BOT_USERNAME}]"
             # echo "QUAY_BOT_SECRET=[${QUAY_BOT_SECRET}]"
             docker login -u="${QUAY_BOT_USERNAME}" -p="${QUAY_BOT_SECRET}" quay.io
@@ -116,14 +116,14 @@ jobs:
             echo "QUAY_OCI_IMAGE_TAG=[${QUAY_OCI_IMAGE_TAG}]"
             export GIT_COMMIT_ID=$(git rev-parse --short HEAD)
             export CICD_BUILD_ID=$CIRCLE_BUILD_NUM
-            export OCI_IMAGE_GUN="quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}"
-            export CICD_BUILD_TIMESTAMP=$(docker inspect --format '{{ index .Config.Labels "io.territoiresfuturs.cicd.build.timestamp"}}' "${OCI_IMAGE_GUN}")
+            export OCI_IMAGE_GUN="quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}"
+            export CICD_BUILD_TIMESTAMP=$(docker inspect --format '{{ index .Config.Labels "io.rotorock-io.cicd.build.timestamp"}}' "${OCI_IMAGE_GUN}")
             echo "GIT_COMMIT_ID=[${GIT_COMMIT_ID}]"
             echo "CICD_BUILD_ID=[${CICD_BUILD_ID}]"
             echo "CICD_BUILD_TIMESTAMP=[${CICD_BUILD_TIMESTAMP}]"
-            docker tag "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}" "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
-            docker push "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}"
-            docker push "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
+            docker tag "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}" "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
+            docker push "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}"
+            docker push "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
 
   # will build and push image with soratable tags, according the stagin workflow described at https://fluxcd.io/docs/guides/image-update/
   container_staging:
@@ -169,15 +169,15 @@ jobs:
             sed -i "s#CICD_BUILD_ID=.*#CICD_BUILD_ID=${CICD_BUILD_ID}#g" docker-compose.prod.build.yml
             sed -i "s#CICD_BUILD_TIMESTAMP=.*#CICD_BUILD_TIMESTAMP=${CICD_BUILD_TIMESTAMP}#g" docker-compose.prod.build.yml
             sed -i "s#QUAY_OCI_IMAGE_TAG=.*#QUAY_OCI_IMAGE_TAG=${QUAY_OCI_IMAGE_TAG}#g" docker-compose.prod.build.yml
-            sed -i "s#image: quay.io/territoiresfuturs/siteweb:.*#image: quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}#g" docker-compose.prod.build.yml
+            sed -i "s#image: quay.io/rotorock-io/siteweb:.*#image: quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}#g" docker-compose.prod.build.yml
             # ---
             echo "# --------------------------------------------------------------------------- #"
             echo "# -------   DOCKER COMPOSE CONFIG : "
             echo "# --------------------------------------------------------------------------- #"
             docker-compose -f ./docker-compose.prod.build.yml config
             echo "# --------------------------------------------------------------------------- #"
-            docker-compose -f ./docker-compose.prod.build.yml build territoiresfuturs_staging
-            # and now [quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}] should exists among [docker images]
+            docker-compose -f ./docker-compose.prod.build.yml build rotorock-io_staging
+            # and now [quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}] should exists among [docker images]
             docker images
       - run:
           name: "Docker login to Container Registry"
@@ -185,8 +185,8 @@ jobs:
             echo "Checking Circle CI Job env. variables"
             echo "SECRETHUB_ORG=[${SECRETHUB_ORG}]"
             echo "SECRETHUB_REPO=[${SECRETHUB_REPO}]"
-            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/username)
-            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/usersecret)
+            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/username)
+            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/usersecret)
             echo "QUAY_BOT_USERNAME=[${QUAY_BOT_USERNAME}]"
             # echo "QUAY_BOT_SECRET=[${QUAY_BOT_SECRET}]"
             docker login -u="${QUAY_BOT_USERNAME}" -p="${QUAY_BOT_SECRET}" quay.io
@@ -196,8 +196,8 @@ jobs:
             echo "Checking Circle CI Job env. variables"
             echo "SECRETHUB_ORG=[${SECRETHUB_ORG}]"
             echo "SECRETHUB_REPO=[${SECRETHUB_REPO}]"
-            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/username)
-            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/territoiresfuturs/gitops/bot/quay.io/usersecret)
+            QUAY_BOT_USERNAME=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/username)
+            QUAY_BOT_SECRET=$(secrethub read ${SECRETHUB_ORG}/${SECRETHUB_REPO}/rotorock-io/gitops/bot/quay.io/usersecret)
             echo "QUAY_BOT_USERNAME=[${QUAY_BOT_USERNAME}]"
             # echo "QUAY_BOT_SECRET=[${QUAY_BOT_SECRET}]"
             docker login -u="${QUAY_BOT_USERNAME}" -p="${QUAY_BOT_SECRET}" quay.io
@@ -213,14 +213,14 @@ jobs:
             export QUAY_OCI_IMAGE_TAG=${CURRY_GIT_BRANCH}-${GIT_COMMIT_ID:0:7}-$(date +%s)
             echo "QUAY_OCI_IMAGE_TAG=[${QUAY_OCI_IMAGE_TAG}]"
             export CICD_BUILD_ID=$CIRCLE_BUILD_NUM
-            export OCI_IMAGE_GUN="quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}"
-            export CICD_BUILD_TIMESTAMP=$(docker inspect --format '{{ index .Config.Labels "io.territoiresfuturs.cicd.build.timestamp"}}' "${OCI_IMAGE_GUN}")
+            export OCI_IMAGE_GUN="quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}"
+            export CICD_BUILD_TIMESTAMP=$(docker inspect --format '{{ index .Config.Labels "io.rotorock-io.cicd.build.timestamp"}}' "${OCI_IMAGE_GUN}")
             echo "GIT_COMMIT_ID=[${GIT_COMMIT_ID}]"
             echo "CICD_BUILD_ID=[${CICD_BUILD_ID}]"
             echo "CICD_BUILD_TIMESTAMP=[${CICD_BUILD_TIMESTAMP}]"
-            docker tag "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}" "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
-            docker push "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}"
-            docker push "quay.io/territoiresfuturs/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
+            docker tag "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}" "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
+            docker push "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}"
+            docker push "quay.io/rotorock-io/siteweb:${QUAY_OCI_IMAGE_TAG}-latest"
 
 
 workflows:
@@ -228,7 +228,7 @@ workflows:
   release:
     jobs:
       - container_release:
-          context: territoiresfuturs-io-cicd
+          context: rotorock-io-io-cicd
           filters:
             branches:
               ignore:
@@ -253,7 +253,7 @@ workflows:
   stage:
     jobs:
       - container_staging:
-          context: territoiresfuturs-io-cicd
+          context: rotorock-io-io-cicd
           filters:
             branches:
               only:

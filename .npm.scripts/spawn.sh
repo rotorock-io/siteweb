@@ -1,6 +1,6 @@
 #!/bin/bash
-export territoiresfuturs_ENV=${territoiresfuturs_ENV:-"staging"}
-source .${territoiresfuturs_ENV}.env
+export rotorockio_ENV=${rotorockio_ENV:-"staging"}
+source .${rotorockio_ENV}.env
 # export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:themefisher/airspace-hugo.git"}
 export HUGO_THEME_GIT_SSH=${HUGO_THEME_GIT_SSH:-"git@github.com:zhaohuabing/hugo-theme-cleanwhite.git"}
 

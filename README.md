@@ -35,9 +35,9 @@ echo "rotorock.io" > CNAME
 
 git add -A && git commit -m "deploy" && git push -u origin HEAD
 
-git flow release start 0.0.3
+git flow release start 0.0.4
 
-git flow release finish -s 0.0.3 && git push -u origin --all && git push -u origin --tags
+git flow release finish -s 0.0.4 && git push -u origin --all && git push -u origin --tags
 
 ```
 
