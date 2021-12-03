@@ -35,9 +35,9 @@ echo "rotorock.io" > CNAME
 
 git add -A && git commit -m "deploy" && git push -u origin HEAD
 
-git flow release start 0.0.4
+git flow release start 0.0.5
 
-git flow release finish -s 0.0.4 && git push -u origin --all && git push -u origin --tags
+git flow release finish -s 0.0.5 && git push -u origin --all && git push -u origin --tags
 
 ```
 
@@ -57,7 +57,7 @@ if [ -d ./public/ ]; then
 fi;
 mkdir public/
 hugo -b ${HUGO_BASE_URL}
-surge rotorock-io.surge.sh public/
+surge  public/ rotorock-io.surge.sh
 
 
 ```
