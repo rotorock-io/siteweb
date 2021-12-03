@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on RotoRock !</title>
+    <link>https://rotorock-io.github.io/siteweb/tags/</link>
+    <description>Recent content in Tags on RotoRock !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 30 Nov 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://rotorock-io.github.io/siteweb/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>évènements</title>
+      <link>https://rotorock-io.github.io/siteweb/tags/%C3%A9v%C3%A8nements/</link>
+      <pubDate>Tue, 30 Nov 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/tags/%C3%A9v%C3%A8nements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2021</title>
+      <link>https://rotorock-io.github.io/siteweb/tags/2021/</link>
+      <pubDate>Wed, 08 Nov 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/tags/2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dernier Album</title>
+      <link>https://rotorock-io.github.io/siteweb/tags/dernier-album/</link>
+      <pubDate>Wed, 08 Nov 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/tags/dernier-album/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guitare</title>
+      <link>https://rotorock-io.github.io/siteweb/tags/guitare/</link>
+      <pubDate>Wed, 08 Nov 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/tags/guitare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Réserver</title>
+      <link>https://rotorock-io.github.io/siteweb/tags/r%C3%A9server/</link>
+      <pubDate>Wed, 08 Nov 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/tags/r%C3%A9server/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

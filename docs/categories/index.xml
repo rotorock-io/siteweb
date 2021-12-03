@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on RotoRock !</title>
+    <link>https://rotorock-io.github.io/siteweb/categories/</link>
+    <description>Recent content in Categories on RotoRock !</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 30 Nov 2021 08:00:00 +0000</lastBuildDate><atom:link href="https://rotorock-io.github.io/siteweb/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>évènements</title>
+      <link>https://rotorock-io.github.io/siteweb/categories/%C3%A9v%C3%A8nements/</link>
+      <pubDate>Tue, 30 Nov 2021 08:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/categories/%C3%A9v%C3%A8nements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concerts</title>
+      <link>https://rotorock-io.github.io/siteweb/categories/concerts/</link>
+      <pubDate>Wed, 08 Nov 2017 15:00:00 +0000</pubDate>
+      
+      <guid>https://rotorock-io.github.io/siteweb/categories/concerts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

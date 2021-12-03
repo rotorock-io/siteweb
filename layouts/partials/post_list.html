@@ -1,0 +1,49 @@
+<!-- post list -->
+{{ range $index, $element := $.Paginator.Pages }}
+<div class="post-preview">
+    <a href="{{ .Permalink }}" class="cadre la main jaune">
+        <h2 class="post-title">
+            {{ .Title }}
+        </h2>
+	{{with .Params.subtitle }}
+        <h3 class="post-subtitle">
+            {{ . }}
+        </h3>
+	{{ end }}
+        <div class="post-content-preview la main jaune">
+	{{ with .Description }}
+            {{ . }}
+        {{ else }}
+            {{ .Summary}}
+       {{ end }}
+            {{ if isset .Params "video_preview_youtube_id" }}
+              <div class="cadre la main jaune embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/{{ .Params.video_preview_youtube_id }}?enablejsapi=1{{ with .Params.video_preview_color }}{{ if eq . "white" }}&color=white{{ end }}{{ end }}{{ with .Params.video_preview_autoplay }}{{ if eq . "true" }}&autoplay=1{{ end }}{{ end }}{{ if isset .Params "video_preview_yt_start" }}&start={{ .Params.video_preview_yt_start }}{{ end }}{{ if isset .Params "video_preview_yt_end" }}&end={{ .Params.video_preview_yt_end }}{{ end }}{{ with .Params.video_preview_modestbranding }}{{ if eq . "true" }}&modestbranding=1{{ end }}{{ end }}" {{ if .Params.video_preview_cssclass }} class="{{ .Params.video_preview_cssclass }}"{{ end }} allowfullscreen></iframe>
+              </div>
+            {{ else }}
+                 <novideo/>
+            {{ end }}
+
+        </div>
+    </a>
+    <p class="post-meta">
+    {{ if .Params.metadata }}
+        {{ range $index, $element := .Params.metadata }}
+            {{ if .link }}
+                <a href="{{ .link }}">{{ .text }}</a>
+            {{ else }}
+                {{ .text }}
+            {{ end }}
+        {{ end }}
+    {{ else }}
+        Posté par{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}  {{ .Date.Format "Monday, January 2, 2006" }}
+        <!-- Don't show "Last Modified on" if update happened on the same day. -->
+        {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
+            <br>Last Modified on {{ dateFormat "Monday, January 2, 2006" .Params.LastMod }}
+        {{ end }}
+    {{ end }}
+    </p>
+
+</div>
+<hr>
+{{ end }}
